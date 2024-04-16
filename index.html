@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>      
+        </div>
+        <header>
+            <h1>
+            Як почати цікавиться програмуванням
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li onclick="window.location.href = 'index.html';">Для чого програмування та поради</li>
+                <li onclick="window.location.href = 'page1.html';">Як це може бути корисним</li>
+            </ul>
+        </nav>
+        <aside>
+            <div class="aside__div aside__div1">
+                Програмування — це захоплива подорож у світ логіки, творчості та розв’язання завдань.
+            </div>
+            <div class="aside__div aside__div2">
+                <img src="img/pc.png" class="aside__img">
+            </div>
+            <div class="aside__div aside__div3">
+                З’ясуйте, чому ви хочете програмувати?
+            </div>
+        </aside>
+        <main>
+            <h2>
+                Для чого програмування та поради
+            </h2>
+            <section>
+                <article class="section__article1 section__article">
+                    Визначте мету: чи хочете ви стати професійним програмістом, розробником веб-сайтів, або просто вивчати для власної цікавості.
+                    Залежно від цілей, оберіть відповідний шлях навчання.
+                </article>
+                <article class="section__article2 section__article">
+                    Почніть з основ:
+
+                    Вивчайте базові концепції, такі як змінні, умови, цикли, функції.
+                    Спробуйте інтерактивні курси або онлайн платформи для самостійного навчання.
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p class="footer__p">
+                Сайт сделан Алімом
+            </p>
+        </footer>
+        <script>
+            $(window).on('load pageshow', function () {
+                $('.preloader').removeClass("off");
+                $('.preloader').addClass("on"); 
+            });    
+            $("a:not([href*=javascript]):not([href*=\\#]):not(.fancybox):not([target]):not([data-fancybox])").click(function() {
+                $('.preloader').removeClass("on");
+                $('.preloader').addClass("off"); 
+                let url = $(this).attr('href');
+                window.setTimeout(function() {
+                    window.location.href = url;
+                }, 550);    
+                return false;
+            });
+                </script>    
+</div>
+</body>
+</html>

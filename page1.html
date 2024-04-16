@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_p1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>      
+        </div>
+        <header>
+            <h1>
+            Як почати цікавиться програмуванням
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li onclick="window.location.href = 'index.html';">Для чого програмування та поради</li>
+                <li onclick="window.location.href = 'page1.html';">Як це може бути корисним</li>
+            </ul>
+        </nav>
+        <aside>
+            <div class="aside__div aside__div1">
+                Автомизация — тому що це скорочує час та енергію. Наприклад, ти не в домі, але треба вимкнути компютер, щоб не очикувати коли він завантажиться.
+            </div>
+            <div class="aside__div aside__div2">
+                <img src="img/auto.png" class="aside__img">
+            </div>
+            <div class="aside__div aside__div3">
+                З’ясуйте, треба вам автомизація?
+            </div>
+        </aside>
+        <main>
+            <h2>
+                Як це може бути корисним?
+            </h2>
+            <section>
+                <article class="section__article1 section__article">
+                    Визначте який від автомизації вам треба: 
+                    Скрипти та програми: Написання скриптів або програм для автоматизації рутинних завдань, таких як обробка даних, автоматизоване тестування програмного забезпечення, створення резервних копій тощо.
+                </article>
+                <article class="section__article2 section__article">
+                    Планери завдань: Використання планерів завдань або інших інструментів для автоматизації виконання певних завдань в певний час, наприклад, виконання певних програм або виконання резервного копіювання.
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p class="footer__p">
+                Сайт зроблен Алімом
+            </p>
+        </footer>
+        <script>
+            $(window).on('load pageshow', function () {
+                $('.preloader').removeClass("off");
+                $('.preloader').addClass("on"); 
+            });    
+            $("a:not([href*=javascript]):not([href*=\\#]):not(.fancybox):not([target]):not([data-fancybox])").click(function() {
+                $('.preloader').removeClass("on");
+                $('.preloader').addClass("off"); 
+                let url = $(this).attr('href');
+                window.setTimeout(function() {
+                    window.location.href = url;
+                }, 550);    
+                return false;
+            });
+                </script>    
+</div>
+</body>
+</html>
